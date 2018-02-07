@@ -1,0 +1,36 @@
+{
+  "name": "mesjid",
+  "version": "1.0.0",
+  "description": "Wordpress Theme Using Taildwindcss ",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ri7nz/Mesjid.git"
+  },
+  "keywords": [
+    "mesjid",
+    "theme",
+    "wordpress",
+    "template"
+  ],
+  "author": "ri7nz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ri7nz/Mesjid/issues"
+  },
+  "homepage": "https://github.com/ri7nz/Mesjid#readme",
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0",
+    "tailwindcss": "^0.4.1"
+  },
+  "devDependencies": {
+    "gulp-scss": "^1.4.0"
+  }
+}

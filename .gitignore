@@ -1,0 +1,4 @@
+node_modules/
+*.swp
+.gulp-scss-cache/
+.sass-cache/

@@ -1,0 +1,80 @@
+@tailwind preflight;
+@import "header";
+
+body{
+    @apply text-base font-sans bg-grey-lightest text-grey-darker;  
+    line-height: 1.375em;
+}
+a {
+    @apply no-underline text-green-lighter; 
+    &:hover, &:focus{
+        @apply text-white;  
+    }
+}
+
+
+
+header{
+    @apply flex bg-green items-center px-4;
+    
+    h1{
+        @apply flex;
+        @apply font-hairline;
+    }
+    nav{
+        @apply w-full flex justify-end text-sm items-center inline-flex; 
+    }
+    ul { 
+        @apply flex justify-end; 
+        @apply list-reset; 
+        @apply cursor-pointer; 
+        li{
+            @apply px-2 py-4;
+            &:hover, &:focus {
+                @apply bg-green-dark;  
+            }
+        }
+    } 
+}
+
+section{
+    @apply flex ; 
+}
+
+section.contents{
+    @apply flex-col;
+}
+
+section.posts{
+    @apply items-start flex-wrap;
+}
+
+article{
+    @apply m-1 p-2   max-w-xl;   
+    min-width: 60rem;
+    @apply border border-grey-light rounded; 
+    @apply bg-white; 
+    
+    h1 {
+        @apply text-lg; 
+    } 
+    .article-header{
+        a{
+            @apply text-grey-darkest; 
+        }
+        @apply border-b pb-2 border-grey-light;
+    }
+    .article-content{
+        @apply w-full overflow-hidden py-2 font-light; 
+        min-height: 60px;
+    }
+    .article-footer {
+        @apply flex justify-end items-center; 
+    }
+}
+
+@import "./button.scss";
+
+@tailwind utilities;
+@tailwind screens;
+
