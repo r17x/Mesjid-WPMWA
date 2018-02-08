@@ -1,5 +1,5 @@
 <?php 
-
+include('shortcode.php');
 
 /* Define custom-header | carosel | slide 
  * this function for register a slide area into fron-page
