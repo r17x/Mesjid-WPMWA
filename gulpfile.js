@@ -5,20 +5,24 @@
  *   browser-sync --save                                        *
  ***************************************************************/
 
-var gulp        = require('gulp');
+var gulp        = require('gulp'),
 
-var sass        = require('gulp-sass');
+    sass        = require('gulp-sass'),
 
-var postcss     = require('gulp-postcss');
+    postcss     = require('gulp-postcss'),
 
-var path        = require('path');
+    path        = require('path'),
 
-var tailwindcss = require('tailwindcss');
-
-var browserSync = require('browser-sync').create();
+    atImport    = require('postcss-import'),
+   
+    tailwindcss = require('tailwindcss'),
+   
+    browserSync = require('browser-sync').create()
+;
 
 
 /****************************************************************
+ postsass(),
  * Deklarasi Variable source, build, configname                 *
  * source : folder yang berisikan file sass,css,scss            *
  * build  : folder untuk menyimpan hasil dari source            * 
@@ -34,16 +38,15 @@ var configname  = 'mesjid';
  *     $ gulp style # untuk menjalankan fungsi dibawah ini      *
  ***************************************************************/
 gulp.task( 'style', () => {
-    var configsass = {
-        includePaths: './src/',
-         
-    };
-    return gulp.src( `${source}/**/*.scss` )
-            .pipe(postcss([
-                tailwindcss( './' + configname + '.js' ),
-                require( 'autoprefixer' ) 
-            ]))
-            .pipe( sass(configsass).on('error', sass.logError) )
+    var plugins = [
+            require('precss'),
+            require('postcss-import'),
+            tailwindcss( './' + configname + '.js' ),
+            require( 'autoprefixer' ) ,
+    ]
+    return gulp.src( source + '/*.scss' )
+            .pipe( postcss(plugins) )
+            .pipe( sass().on('error', sass.logError) )
             .pipe( gulp.dest( build + './' ) );
 });
 
@@ -65,5 +68,13 @@ gulp.task( 'live', ['style'], function()  {
  *     $ gulp  # untuk menjalankan fungsi dibawah ini           *
  ***************************************************************/
 gulp.task( 'default', () => {
-    gulp.watch( source + '/**/*.scss', ['style']);
+    let watchList = [
+        'scss',
+        'css', 
+    ];
+
+    watchList.map((ext) => {
+        gulp.watch( `${source}/**/*.${ext}`, ['style']);
+    });
 } );
+

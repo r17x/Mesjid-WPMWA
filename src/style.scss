@@ -1,5 +1,4 @@
 @tailwind preflight;
-@import "header";
 
 body{
     @apply text-base font-sans bg-grey-lightest text-grey-darker;  
@@ -16,7 +15,7 @@ a {
 
 header{
     @apply flex bg-green items-center px-4;
-    
+
     h1{
         @apply flex;
         @apply font-hairline;
@@ -37,6 +36,11 @@ header{
     } 
 }
 
+/*************
+*Imort Button*
+************/
+@import "button.css";
+
 section{
     @apply flex ; 
 }
@@ -45,8 +49,12 @@ section.contents{
     @apply flex-col;
 }
 
+section.single{
+    @apply mx-4 my-2 items-start flex-wrap;
+}
+
 section.posts{
-    @apply items-start flex-wrap;
+    @apply mx-4 my-2 items-start flex-wrap;
 }
 
 article{
@@ -54,7 +62,7 @@ article{
     min-width: 60rem;
     @apply border border-grey-light rounded; 
     @apply bg-white; 
-    
+
     h1 {
         @apply text-lg; 
     } 
@@ -71,10 +79,41 @@ article{
     .article-footer {
         @apply flex justify-end items-center; 
     }
+    .article-nav {
+        @apply flex w-full mt-4; 
+        ul{
+            @apply inline-flex w-full  list-reset justify-between;   
+
+                a {
+                    @apply btn btn-s font-hairline w-full max-w-sm;  
+                    &:hover, &:focus {
+                        @apply btn;  
+                    }
+                } 
+
+                .next {
+                    a:after {
+                        content: '\00a0\00a0\2192'; 
+                    } 
+                }
+                .previous {
+                    a:before {
+                        content: '\2190\00a0\00a0'; 
+                    } 
+                }
+        }
+    }
 }
 
-@import "./button.scss";
+
+
+footer{
+    @apply m-4 p-1 font-semibold; 
+}
+
+
 
 @tailwind utilities;
+
 @tailwind screens;
 

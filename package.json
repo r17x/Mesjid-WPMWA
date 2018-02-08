@@ -28,9 +28,15 @@
     "gulp": "^3.9.1",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^3.1.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-sass": "^0.3.0",
+    "postcss-scss": "^1.0.3",
+    "precss": "^3.1.0",
     "tailwindcss": "^0.4.1"
   },
   "devDependencies": {
-    "gulp-scss": "^1.4.0"
+    "cssnano": "^3.10.0",
+    "gulp-scss": "^1.4.0",
+    "postcss-partial-import": "^4.1.0"
   }
 }

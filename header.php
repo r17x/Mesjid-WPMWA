@@ -7,14 +7,14 @@ global $page, $paged;
 
 if( is_search() ){
     wp_title( '', true, 'left' );
-    echo '|';
+    echo ' | ';
 }else wp_title('|', true, 'right');
 
 bloginfo('name');
 
 if( is_front_page() ){
-    echo '|';
-    bloginfo('name');
+    echo ' | ';
+    bloginfo('description');
 }
 
 if( $paged >= 2 || $page >=2 ){

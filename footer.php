@@ -3,7 +3,7 @@
 <div id="footer-container">
 
     <footer id="footer">
-    <p><small>Copyright <?php bloginfo('name'); ?></small></p>    
+    <p><small>Copyright &copy; <?php echo date('Y', $_SERVER['REQUEST_TIME']).' ' ; bloginfo('name')?> All rights reserved.</small></p>    
     </footer>
 
 </div>
