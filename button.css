@@ -540,11 +540,11 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  .btn a {
-    all: unset; }
-  .btn:hover, .btn:focus {
-    background-color: transparent;
-    color: #38c172; }
+
+.btn:hover,
+.btn:focus {
+  background-color: transparent;
+  color: #38c172; }
 
 .btn-m {
   width: 50%; }

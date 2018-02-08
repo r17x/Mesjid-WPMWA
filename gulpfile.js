@@ -72,7 +72,6 @@ gulp.task( 'default', () => {
         'scss',
         'css', 
     ];
-
     watchList.map((ext) => {
         gulp.watch( `${source}/**/*.${ext}`, ['style']);
     });

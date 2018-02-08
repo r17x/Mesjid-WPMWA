@@ -1,0 +1,16 @@
+section{
+    @apply flex ; 
+}
+
+section.contents{
+    @apply flex-col;
+}
+
+section.single{
+    @apply mx-4 my-2 items-start flex-wrap;
+}
+
+section.posts{
+    @apply mx-4 my-2 items-start flex-wrap;
+}
+

@@ -1,0 +1,23 @@
+header{
+    @apply flex bg-green items-center px-4;
+
+    h1{
+        @apply flex;
+        @apply font-hairline;
+    }
+    nav{
+        @apply w-full flex justify-end text-sm items-center inline-flex; 
+    }
+    ul { 
+        @apply flex justify-end; 
+        @apply list-reset; 
+        @apply cursor-pointer; 
+        li{
+            @apply px-2 py-4;
+            &:hover, &:focus {
+                @apply bg-green-dark;  
+            }
+        }
+    } 
+}
+
