@@ -209,3 +209,17 @@ register_nav_menus([
     'place_global'  => 'Global Menu',
     'place_utility' => 'Main Menu'
 ]); 
+
+add_filter( 'wp_nav_menu_items', 'custom_menus', 10, 2 );
+function custom_menus($items, $args){
+
+    if( is_user_logged_in() ){
+        $logout_url  = wp_logout_url('/');
+        $items      .= '<li><a href="' . $logout_url . '"> Keluar </a> </li>';
+        return $items;
+    }
+
+    $items .= '<li><a href="/daftar">Daftar</a></li>' .
+              '<li><a href="/masuk">Masuk</a></li>'   ;
+    return $items;
+}
