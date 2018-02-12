@@ -79,4 +79,29 @@ function checkField($fields=[], $post=False){
 
     return $data;
 }
-
+add_action('edit_user_profile', 'update_user');
+function update_user(){
+    /* Ref : https://codex.wordpress.org/Function_Reference/wp_get_current_user */
+    global $current_user;
+    $fields = [
+        'first-name'  => 'first_name',
+        'last-name'   => 'last_name',
+        'email'       => 'user_email',
+        'url'         => 'user_url',
+        'description' => 'description'
+    ];
+    if($_SERVER['REQUEST_METHOD'] ==='POST'){
+        /* check if password input */
+        if($_POST['pass1'] != $_POST['pass2']){
+            return $_SESSION['NOTICE_FORM'] = 'Password Tidak Cocok';
+        }
+        $data = ['ID' => $current_user->ID];
+        foreach( $fields as $field => $name ){
+            if( in_array($field, array_keys($_POST)) ){
+                $data[$name] = $_POST[$field];
+            }
+        }
+        $errors = wp_update_user($data);
+        echo "<script> window.location='" .  get_author_posts_url($current_user->ID) . "'; </script>"; 
+    }
+}
