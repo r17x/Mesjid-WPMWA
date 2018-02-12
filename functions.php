@@ -212,9 +212,10 @@ register_nav_menus([
 
 add_filter( 'wp_nav_menu_items', 'custom_menus', 10, 2 );
 function custom_menus($items, $args){
-
     if( is_user_logged_in() ){
+        $user        = get_current_user();
         $logout_url  = wp_logout_url('/');
+        $items      .= '<li><a href="' . get_author_posts_url(get_current_user_id()) . '">Profile </a> </li>';
         $items      .= '<li><a href="' . $logout_url . '"> Keluar </a> </li>';
         return $items;
     }
@@ -222,4 +223,23 @@ function custom_menus($items, $args){
     $items .= '<li><a href="/daftar">Daftar</a></li>' .
               '<li><a href="/masuk">Masuk</a></li>'   ;
     return $items;
+}
+
+/**
+ * Limit Dashboard
+ *
+ */
+
+add_action('init', 'blockusers_init');
+add_action('after_setup_theme', 'remove_adminbar');
+function blockusers_init(){
+    if( is_admin() && ! current_user_can('administrator') &&
+            !(defined('DOING_AJAX') && DOING_AJAX)){
+            echo '<script>window.location = "'. home_url() .'"; </script>' ;
+            exit;
+    }
+}
+function remove_adminbar(){
+    if( ! current_user_can('administrator') && ! is_admin())
+        show_admin_bar(false); 
 }
