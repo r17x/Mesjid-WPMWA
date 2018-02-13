@@ -627,9 +627,10 @@ header ul li:focus {
 section {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  min-height: 3rem; }
 
-section.contents {
+section.contents#contents {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -646,6 +647,9 @@ section.single {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
+section.single header {
+  background-color: transparent; }
+
 section.posts {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -656,6 +660,92 @@ section.posts {
   align-items: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+
+form {
+  margin: 1rem;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  max-width: 40rem;
+  padding: 1rem; }
+
+form label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #606f7b;
+  font-size: .75rem;
+  font-weight: 700;
+  margin-bottom: .5rem; }
+
+form label i {
+  font-size: .6rem; }
+
+form label i:before {
+  content: "*"; }
+
+form input,
+form input[type="text"],
+form textarea {
+  width: auto;
+  background-color: #f1f5f8;
+  color: #606f7b;
+  border-width: 1px;
+  border-color: #dae1e7;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: .75rem;
+  display: block;
+  width: 100%; }
+
+form input:hover,
+form input:active,
+form input:focus,
+form input[type="text"]:hover,
+form input[type="text"]:active,
+form input[type="text"]:focus,
+form textarea:hover,
+form textarea:active,
+form textarea:focus {
+  border-width: 1px;
+  border-color: #1f9d55; }
+
+form input[type="submit"] {
+  background-image: -webkit-gradient(linear, left top, right top, from("#11998e"), to("#38ef7d"));
+  background-image: linear-gradient(to right, "#11998e", "#38ef7d");
+  background-color: #38c172;
+  color: #f8fafc;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem; }
+
+form input[type="submit"]:hover {
+  color: #fff; }
+
+form select {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  background-color: #f1f5f8;
+  border-width: 1px;
+  border-color: #dae1e7;
+  color: #606f7b;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-right: 2rem; }
+
+form select:hover,
+form select:active,
+form select:focus {
+  border-width: 1px;
+  border-color: #1f9d55; }
 
 article {
   margin: .25rem;

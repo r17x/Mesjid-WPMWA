@@ -93,7 +93,13 @@ function update_user(){
     if($_SERVER['REQUEST_METHOD'] ==='POST'){
         /* check if password input */
         if($_POST['pass1'] != $_POST['pass2']){
-            return $_SESSION['NOTICE_FORM'] = 'Password Tidak Cocok';
+            return message('Info', 'Nampaknya Password yang di input kurang tepat!');
+        }else if( ! empty($_POST['pass1']) ){
+            wp_set_password(
+                $_POST['pass1'],
+                $current_user->ID 
+            );
+            echo "<script> window.location='/masuk'; </script>"; 
         }
         $data = ['ID' => $current_user->ID];
         foreach( $fields as $field => $name ){
@@ -104,4 +110,27 @@ function update_user(){
         $errors = wp_update_user($data);
         echo "<script> window.location='" .  get_author_posts_url($current_user->ID) . "'; </script>"; 
     }
+}
+
+add_action('create_kegiatan', 'create_kegiatan');
+function create_kegiatan(){
+    if( $_SERVER['REQUEST_METHOD'] === 'POST' )
+    print_r($_POST);
+}
+
+add_shortcode('form_kegiatan' , 'form_kegiatan');
+
+function form_kegiatan(){
+    get_template_part('part/form-kegiatan'); 
+}
+add_action('create_mesjid', 'create_mesjid');
+function create_mesjid(){
+    if( $_SERVER['REQUEST_METHOD'] === 'POST' )
+    print_r($_POST);
+}
+
+add_shortcode('form_mesjid' , 'form_mesjid');
+
+function form_mesjid(){
+    get_template_part('part/form-mesjid'); 
 }

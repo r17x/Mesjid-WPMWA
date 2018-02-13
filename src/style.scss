@@ -13,9 +13,13 @@ a {
 /***********************************
 * All all import component ext css *
 ***********************************/
+$color-quepal : linear-gradient(to right, '#11998e', '#38ef7d');
+
+$primary-color: $color-quepal; 
 @import "header.css";
 @import "button.css";
 @import "section.css";
+@import "form.css";
 @import "article.css";
 
 @tailwind utilities;

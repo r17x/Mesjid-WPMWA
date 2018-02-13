@@ -1,13 +1,17 @@
 section{
     @apply flex ; 
+    min-height: 3rem; 
 }
 
-section.contents{
+section.contents#contents{
     @apply flex-col;
 }
 
 section.single{
     @apply mx-4 my-2 items-start flex-wrap;
+    header{
+    @apply bg-transparent;  
+    }
 }
 
 section.posts{
