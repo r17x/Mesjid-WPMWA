@@ -114,6 +114,13 @@ function update_user(){
 
 add_action('create_kegiatan', 'create_kegiatan');
 function create_kegiatan(){
+ if( ! is_user_logged_in() ){
+    $_SESSION['NOTICE'] = message('Login', "Anda Harus Login terlebih dahulu."); 
+    echo sprintf("<script> window.location = '%s' ;</script>", 
+            home_url('masuk')
+        );
+    die; 
+ }
     if( $_SERVER['REQUEST_METHOD'] === 'POST' )
     print_r($_POST);
 }

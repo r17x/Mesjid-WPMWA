@@ -1,3 +1,7 @@
+<?php echo isset($_SESSION['NOTICE']) ? $_SESSION['NOTICE'] : '' ;
+
+var_dump($_SESSION['NOTICE']);
+?>
 <form class="login"  method="post">
     <div class="group">
         <label for="username" id="username" class="label">
