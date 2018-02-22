@@ -10,6 +10,11 @@ $error = array();
 get_template_part('part/article'); 
 endwhile; ?>
 </section>
+<?php else: ?>
+    <p class="no-data">
+        <?php _e('Mohon Maaf Anda Belum menambahkan konten, silahkan menambahkan baik itu berita atau mesjid di sekitar rumah anda , terima kasih!', 'profile'); ?>
+    </p><!-- .no-data -->
+<?php endif; ?>
 <section class="w-auto">
 <?php 
 global $wp;
@@ -19,13 +24,8 @@ if ( is_user_logged_in() && (home_url( $wp->request ).'/' === get_author_posts_u
 <?php endif; ?>
 </section>
 </section>
-<?php else: ?>
-    <p class="no-data">
-        <?php _e('Sorry, no page matched your criteria.', 'profile'); ?>
-    </p><!-- .no-data -->
-<?php endif; 
 
-
+<?php
 get_footer();
 
 ?>

@@ -130,14 +130,83 @@ add_shortcode('form_kegiatan' , 'form_kegiatan');
 function form_kegiatan(){
     get_template_part('part/form-kegiatan'); 
 }
+
 add_action('create_mesjid', 'create_mesjid');
+function postToMeta($meta_list, $request){
+    $metadata = [];
+    foreach( $meta_list as $meta ){
+        $metadata[$meta] = in_array($meta, array_keys($request)) ? $request[$meta] : '';  
+    }
+    return $metadata;
+}
 function create_mesjid(){
-    if( $_SERVER['REQUEST_METHOD'] === 'POST' )
-    print_r($_POST);
+    checkLogin();
+    if( $_SERVER['REQUEST_METHOD'] === 'POST' && 
+        checkNonce($_REQUEST['_wpnonce'], $_REQUEST['action']) ){
+
+        $meta_key = ['phone', 'alamat'];
+        $post = [
+            'post_title'   => $_POST['nama'],
+            'post_content' => $_POST['deskripsi'],
+            'post_type'    => 'mesjid',
+            'post_status'  => 'publish',
+            'meta_input'   => postToMeta($meta_key, $_POST)
+        ];
+
+        $postID = wp_insert_post($post);
+
+        if( is_wp_error($postID) )
+            echo "Gagal Menambahkan Mesjid " . $_POST['nama']; 
+
+        if( isset($_FILES['gambar']) ){
+
+            $files = $_FILES['gambar'];
+            uploadMedia( $files, $postID ) ;
+        }
+
+        echo "Mesjid ". $_POST['nama'] . " Berhasil di tambahkan" ; 
+        exit; 
+    }
+}
+
+function checkLogin() {
+ if( ! is_user_logged_in() ){
+    $_SESSION['NOTICE'] = message('Login', "Anda Harus Login terlebih dahulu."); 
+    echo sprintf("<script> window.location = '%s' ;</script>", 
+            home_url('masuk')
+        );
+    die; 
+ }
+}
+
+/**
+ * Method Upload From Front End
+ */
+function uploadMedia($files, $postID, $apply=FALSE){
+    if(is_null($files)){
+        return;
+    }
+    require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+    require_once(ABSPATH . "wp-admin" . '/includes/file.php');
+    require_once(ABSPATH . "wp-admin" . '/includes/media.php');
+    
+    $attachID = media_handle_upload($files, $postID); 
+
+    if ( $apply )
+        set_post_thumbnail($postID, $attachID);
+
+    return $attachID; 
 }
 
 add_shortcode('form_mesjid' , 'form_mesjid');
 
 function form_mesjid(){
     get_template_part('part/form-mesjid'); 
+    if( $_SERVER['REQUEST_METHOD'] === 'POST' ){
+        create_mesjid(); 
+    }
+}
+
+function checkNonce($nonce, $action){
+    return wp_verify_nonce( $nonce, $action ); 
 }

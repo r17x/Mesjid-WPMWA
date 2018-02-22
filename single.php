@@ -1,6 +1,7 @@
 <?php get_header() ?>
 
-<section id="contents" class="single">
+<section id="contents container" class="contents ">
+<section class="posts">
     <?php 
 if( have_posts() ):
     while( have_posts() ):
@@ -11,6 +12,8 @@ if( have_posts() ):
     //    comments_template('', TRUE);
 endif;
     ?>
+</section>
+<?php get_sidebar();  ?>
 </section>
 <?php
     get_footer();

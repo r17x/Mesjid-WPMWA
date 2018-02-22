@@ -5,15 +5,19 @@ $isPage = ! is_single();
 <article>
   <div class="article-header">
     <h1><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h1>
-    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail()?></a>
+    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('category_image')?></a>
   </div>
   <div class="article-content">
-    <?php if( ! $isPage  ){
+     <?php
+        if( ! $isPage  ){
             the_content(); 
           }else{
             the_excerpt();
           }
-     ?>
+        
+        if(! $isPage && get_post_type() === 'mesjid')
+            the_meta();
+    ?>
   </div>
   <div class="article-footer">
     <?php if( $isPage ): ?>

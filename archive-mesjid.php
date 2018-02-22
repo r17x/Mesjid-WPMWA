@@ -9,7 +9,7 @@
         <?php 
             # list post type want to load on front page
             $content = [
-                'post',
+                'mesjid',
             ]; 
 
             foreach( $content as $post_type ){
@@ -32,5 +32,4 @@
 <!-- EndContent -->
 
 <?php get_footer(); ?>
-
 
