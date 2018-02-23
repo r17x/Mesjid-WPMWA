@@ -1,8 +1,12 @@
 header{
-    @apply flex bg-green items-center px-4;
-
+    @apply flex flex-col bg-green items-center;
+    .container {
+        @apply flex inline-flex justify-center;   
+    }
+    .brand {
+        @apply flex items-center justify-center;  
+    }
     h1{
-        @apply flex;
         @apply font-hairline;
     }
     nav{

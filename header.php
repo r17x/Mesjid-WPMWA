@@ -33,17 +33,19 @@ if( $paged >= 2 || $page >=2 ){
 <body <?php body_class(); ?> >
 <div id="wrap">
 <!-- Header -->
-    <div id="container">
-        <header id="header" class="header">
+        <header class="header">
+            <div class="container">
+                <div class="brand">
             <a href="<?php home_url(); ?>"><h1> <?php bloginfo('name'); ?> </h1></a>
-            <?php
+                </div>
+                <?php
                 wp_nav_menu([
                     'container'      => 'nav',
                     'container_id'   => 'utility-nav',
                     'theme_location' => 'place_utility'
                 ]);
-            ?>
+                ?>
+        </div>
         </header> 
-    </div>
 <!-- EndHeader -->
 

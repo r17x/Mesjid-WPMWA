@@ -1,20 +1,18 @@
 section{
-    @apply flex ; 
+    @apply flex w-full;
     min-height: 3rem; 
 }
 
 section.contents#contents{
-    @apply flex-col;
-}
-
-section.single{
-    @apply mx-4 my-2 items-start flex-wrap;
-    header{
-    @apply bg-transparent;  
-    }
+    @apply flex-col items-center justify-center;
 }
 
 section.posts{
-    @apply mx-4 my-2 items-start flex-wrap;
+    @apply flex-col items-center;
+    .title{
+        @apply text-2xl font-light text-left 
+        my-2 mb-4 border-b border-grey-light 
+        tracking-wide w-full pb-2 cursor-pointer;
+    } 
 }
 

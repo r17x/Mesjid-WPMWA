@@ -4,8 +4,9 @@ global $current_user, $wp_roles;
 
 $error = array();
 ?>
-<section class="contents">
-<section class="posts w-3/4">
+<section  id="contents" class="contents">
+<div class="container inline-flex">
+<section id="post" class="posts w-3/4 mt-4" >
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 get_template_part('part/article'); 
 endwhile; ?>
@@ -23,6 +24,7 @@ if ( is_user_logged_in() && (home_url( $wp->request ).'/' === get_author_posts_u
 <?php include('part/form-profile.php'); ?>
 <?php endif; ?>
 </section>
+</div>
 </section>
 
 <?php
