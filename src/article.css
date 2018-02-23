@@ -1,5 +1,5 @@
 article{
-    @apply m-1 p-2   max-w-xl;   
+    @apply m-1    max-w-xl;   
     min-width: 60rem;
     @apply border border-grey-light rounded; 
     @apply bg-white; 
@@ -11,19 +11,30 @@ article{
         a{
             @apply text-grey-darkest; 
         }
-        @apply border-b pb-2 border-grey-light;
+        @apply border-b p-2 border-grey-light;
     }
     .article-content{
-        @apply w-full overflow-hidden py-2 font-light; 
+        @apply w-full overflow-hidden p-2 font-light; 
         min-height: 60px;
     }
     .article-footer {
         @apply flex justify-end items-center; 
+        .btn {
+            @apply block w-full
+            border-grey-light bg-transparent
+            rounded-b text-right
+            text-green 
+            ; 
+
+            &:hover, &:focus{
+                @apply font-bold shadow border-green; 
+            }
+        }
     }
     .article-nav {
         @apply flex w-full mt-4; 
         ul{
-            @apply inline-flex w-full  list-reset justify-between;   
+            @apply inline-flex w-full list-reset justify-between;   
 
                 a {
                     @apply btn btn-s font-hairline w-full max-w-sm;  

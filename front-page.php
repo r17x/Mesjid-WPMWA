@@ -1,8 +1,22 @@
 <?php get_header(); ?>
 <!-- Content -->
 <section id="contents containter" class="contents h-screen overflow-x-scroll">
-
     <section id="post" class="posts flex justify-center items-center">
+<?php if( is_front_page() ): ?>
+
+
+    <img 
+
+        src="<?php header_image();?>" 
+
+                width="<?php get_custom_header()->width;?>" 
+
+                        height="<?php get_custom_header()->height;?>" 
+
+                                alt="" />
+
+
+<?php endif; ?>
         <?php 
             # list post type want to load on front page
             $content = [

@@ -9,7 +9,7 @@ if(is_single() && in_category('column' ) ):
     get_template_part('social-button');
 endif;?>
         </header>
-            <section class="article-content;">
+            <section class="article-content">
                 <?php the_content(); ?>
             </section>
 <?php 

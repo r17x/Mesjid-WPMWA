@@ -749,7 +749,6 @@ form select:focus {
 
 article {
   margin: .25rem;
-  padding: .5rem;
   max-width: 60rem;
   min-width: 60rem;
   border-width: 1px;
@@ -762,7 +761,7 @@ article h1 {
 
 article .article-header {
   border-bottom-width: 1px;
-  padding-bottom: .5rem;
+  padding: .5rem;
   border-color: #dae1e7; }
 
 article .article-header a {
@@ -771,8 +770,7 @@ article .article-header a {
 article .article-content {
   width: 100%;
   overflow: hidden;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding: .5rem;
   font-weight: 300;
   min-height: 60px; }
 
@@ -786,6 +784,23 @@ article .article-footer {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+
+article .article-footer .btn {
+  display: block;
+  width: 100%;
+  border-color: #dae1e7;
+  background-color: transparent;
+  border-bottom-right-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+  text-align: right;
+  color: #38c172; }
+
+article .article-footer .btn:hover,
+article .article-footer .btn:focus {
+  font-weight: 700;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-color: #38c172; }
 
 article .article-nav {
   display: -webkit-box;
@@ -866,6 +881,54 @@ footer {
   margin: 1rem;
   padding: .25rem;
   font-weight: 600; }
+
+.widget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%; }
+
+.widget aside {
+  width: 100%;
+  margin-bottom: .5rem; }
+
+.widget aside h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: .5rem;
+  border-bottom-width: 1px;
+  border-style: solid;
+  margin-bottom: .5rem; }
+
+.widget aside ul {
+  list-style: none;
+  padding: 0;
+  font-size: .875rem; }
+
+.widget aside ul li {
+  color: #8795a1;
+  cursor: pointer; }
+
+.widget aside ul li a {
+  all: inherit; }
+
+.widget aside ul li a:hover,
+.widget aside ul li a:focus {
+  font-weight: 700; }
 
 .container {
   width: 100%; }

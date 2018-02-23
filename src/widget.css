@@ -1,0 +1,32 @@
+.widget{
+    @apply 
+        flex flex-col 
+        bg-white w-full 
+        px-4 py-2 items-center 
+        h-full
+    ;
+    aside {
+        @apply w-full mb-2;    
+
+        h1{
+            @apply text-base font-semibold text-center p-2 border-b border-solid mb-2;      
+        }
+
+        ul {
+        
+           @apply list-reset text-sm;   
+
+           li {
+            @apply text-grey-dark cursor-pointer;  
+            a {
+                all: inherit;  
+
+                &:hover, &:focus{
+                    @apply font-bold;  
+                }
+            }
+
+           }
+        }
+    }
+}
