@@ -24,6 +24,7 @@ if( $paged >= 2 || $page >=2 ){
 ?>
     </title>
 
+<meta name="viewport" content="width=device-width, user-scalable=no" />
 <!-- Style Sheet -->
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url');?>">
 <?php wp_head(); ?>
