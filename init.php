@@ -29,7 +29,7 @@ function generateManifest($path){
 
     fwrite($f, json_encode($manifest));
     fclose($f);
-    $f = fopen( $path, 'sw.js' , 'w');
+    $f = fopen( $path. 'sw.js' , 'w');
 
     $js = "self.addEventListener('install', function(e) {
             e.waitUntil(
@@ -43,7 +43,7 @@ function generateManifest($path){
                 );
             });";
     fwrite($f, $js);
-    fclose();
+    fclose($f);
 }
 
 add_action( 'wp_head', function(){
