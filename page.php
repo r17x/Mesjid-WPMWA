@@ -10,7 +10,6 @@ endif;
 get_template_part('back_to_top');
 ?>
 </section><!-- #contents end -->
-<?php get_sidebar();?>
 <?php get_footer();?>
 
 

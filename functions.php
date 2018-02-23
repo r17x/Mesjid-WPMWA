@@ -7,9 +7,9 @@ include('shortcode.php');
  * this function for register a slide area into fron-page
  */
 $defaults = array( 
-    'default-image'      =>  '%s/images/top/main_image.png',
-    'width'              =>  950,
-    'height'             =>  295,
+    'default-image'      =>  '%s/img/custom_header.jpg',
+    'width'              =>  1356,
+    'height'             =>  256,
     'default-text-color' =>  '',
     'header-text'        => false
 );
