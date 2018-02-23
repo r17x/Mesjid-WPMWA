@@ -1,5 +1,6 @@
 <?php 
 session_start(); 
+include('init.php'); 
 include('shortcode.php');
 
 /* Define custom-header | carosel | slide 
