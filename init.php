@@ -25,7 +25,8 @@ function checkPage(){
                 'post_status' => 'publish',
             ];
 
-            wp_insert_post($page);
+            $page = wp_insert_post($page);
+            update_post_meta( $page , '_wp_page_template', 'template-page-fullwidth.php' );
         }
         continue;
     }
