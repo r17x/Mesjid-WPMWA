@@ -11,7 +11,7 @@ self.addEventListener('install', function(e) {
               '/wp-content/wp-content/themes/mesjid/img/16x16.png',
               '/wp-content/wp-content/themes/mesjid/img/apple-touch-icon-120x120.png',
               '/wp-content/wp-content/themes/mesjid/img/32x32.png',
-              '/wp-content/themes/mesjid/img/310x310.png'
+              '/wp-content/wp-content/themes/mesjid/img/310x310.png'
           ]) ; 
       })            
   );
