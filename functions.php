@@ -165,14 +165,14 @@ function the_category_image(){
 /**
  * comment filter 
  */
-add_filter( 'comments_open' , 'comments_allow_only_column' ,10 , 2);
-function comments_allow_only_column( $open, $post_id ){
-    if( ! in_category('column') ) 
-
-        $open = FALSE;
-
-    return $open;
-}
+//add_filter( 'comments_open' , 'comments_allow_only_column' ,10 , 2);
+//function comments_allow_only_column( $open, $post_id ){
+//    if( ! in_category('column') ) 
+//
+//        $open = FALSE;
+//
+//    return $open;
+//}
 
 
 /** ShortCode Post Shop

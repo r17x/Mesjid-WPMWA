@@ -4,7 +4,7 @@ if( isset($contents) && $contents->have_posts() ):
         $contents->the_post();
         include('part/article.php');
     endwhile;
-elseif( have_posts() ):
+elseif( have_posts()):
     while( have_posts() ):
         the_post();
         include('part/article.php');

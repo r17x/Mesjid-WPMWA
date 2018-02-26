@@ -51,7 +51,9 @@ self.addEventListener('fetch', function(e) {
     );
 });
 
-//Button Form 
+/**
+ * Create Install Prompt | Added To Homescreen
+ */
 self.addEventListener('beforeinstallprompt', function(e) {
     e.userChoice.then( function(choiceResult){
         console.log(choiceResult.outcome); 

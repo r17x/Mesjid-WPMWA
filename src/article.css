@@ -35,24 +35,32 @@ article{
         ul{
             @apply inline-flex w-full list-reset justify-between;   
 
-                a {
-                    @apply btn btn-s font-hairline w-full max-w-sm;  
-                    &:hover, &:focus {
-                        @apply btn bg-transparent text-green;   
-                    }
-                } 
+            a {
+                @apply btn btn-s font-hairline w-full max-w-sm;  
+                &:hover, &:focus {
+                    @apply btn bg-transparent text-green;   
+                }
+            } 
 
-                .next {
-                    a:after {
-                        content: '\00a0\00a0\2192'; 
-                    } 
-                }
-                .previous {
-                    a:before {
-                        content: '\2190\00a0\00a0'; 
-                    } 
-                }
+            .next {
+                a:after {
+                    content: '\00a0\00a0\2192'; 
+                } 
+            }
+            .previous {
+                a:before {
+                    content: '\2190\00a0\00a0'; 
+                } 
+            }
         }
+    }
+
+    .comments-area {
+        @apply flex flex-col p-2 border-t border-solid border-grey-light mt-2 ; 
+       h2 {
+        @apply text-sm;  
+       } 
+
     }
 }
 

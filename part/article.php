@@ -33,6 +33,9 @@ if( $isSingle && get_post_type() === 'mesjid')
         </nav> 
     <?php endif;?>
   </div>
+    <?php if ( is_single()  )
+        comments_template();
+    ?>
 <?php endif; ?>
 </article>    
 
