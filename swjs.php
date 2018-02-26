@@ -22,6 +22,11 @@
     }, $list);
     
 ?>
+
+
+/**
+ * Create Cache All 
+ */
 self.addEventListener('install', function(e) {
   e.waitUntil(
       caches.open('<?php echo $name?>').then(function(c){
@@ -33,6 +38,18 @@ self.addEventListener('install', function(e) {
   );
 });
 
+/**
+ * Create Fetch Catch for response cache if match
+ */
+self.addEventListener('fetch', function(e) {
+    // check all request url
+    console.log(e.request.url);
+    e.respondWith(
+        caches.match(e.request).then( function(res){
+            return res || fetch(e.request); 
+        })
+    );
+});
 
 //Button Form 
 self.addEventListener('beforeinstallprompt', function(e) {
