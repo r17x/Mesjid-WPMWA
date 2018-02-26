@@ -17,7 +17,16 @@ header{
         @apply font-hairline;
     }
     nav{
-        @apply w-full flex justify-end text-sm items-center inline-flex; 
+        @apply w-full flex justify-center text-sm items-center inline-flex; 
+
+        @screen lg {
+            @apply justify-end;  
+        }
+
+        @screen md {
+            @apply justify-end;  
+        }
+
     }
     ul { 
         @apply flex justify-end; 
