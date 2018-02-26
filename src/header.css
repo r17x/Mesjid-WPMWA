@@ -1,10 +1,17 @@
 header{
     @apply flex flex-col bg-green items-center;
-    .container {
-        @apply flex inline-flex justify-center;   
+
+    .menu-header{
+        @apply flex flex-col justify-center;   
+        @screen lg {
+            @apply flex-row;
+        }
+        @screen md {
+            @apply flex-row ;
+        }
     }
     .brand {
-        @apply flex items-center justify-center;  
+        @apply flex items-center justify-center mt-2; 
     }
     h1{
         @apply font-hairline;

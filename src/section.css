@@ -3,8 +3,29 @@ section{
     min-height: 3rem; 
 }
 
+.header-image{
+    @apply h-24 w-full bg-contain bg-center bg-no-repeat bg-grey-lighter;
+    @screen md {
+        @apply h-64; 
+    }
+    @screen lg {
+        @apply h-64; 
+    }
+
+}
+
 section.contents#contents{
     @apply flex-col items-center justify-center;
+    .col-2 {
+        @apply w-full p-1; 
+        @screen md {
+            @apply w-1/2 p-2; 
+        }
+        @screen lg {
+            @apply w-1/2 p-2; 
+        }
+    }    
+
 }
 
 section.posts{

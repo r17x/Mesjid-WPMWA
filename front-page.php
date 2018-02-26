@@ -21,7 +21,7 @@ foreach( $content as $post_type ):
     );
     $contents = new WP_Query($args);
 ?>
-<div class="w-1/2 p-2">
+<div class="col-2">
 <?php 
     $post_type_title = $post_type === 'post' ? 'berita' : $post_type; 
     echo sprintf("<h1 class='title'><a style='all:unset' href='%s'>%s</a></h1>",

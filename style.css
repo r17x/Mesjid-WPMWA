@@ -550,16 +550,29 @@ header {
   -ms-flex-align: center;
   align-items: center; }
 
-header .container {
+header .menu-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media (min-width: 992px) {
+    header .menu-header {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
+  @media (min-width: 768px) {
+    header .menu-header {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
 
 header .brand {
   display: -webkit-box;
@@ -570,7 +583,8 @@ header .brand {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: .5rem; }
 
 header h1 {
   font-weight: 100; }
@@ -652,6 +666,20 @@ section {
   width: 100%;
   min-height: 3rem; }
 
+.header-image {
+  height: 6rem;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f1f5f8; }
+  @media (min-width: 768px) {
+    .header-image {
+      height: 16rem; } }
+  @media (min-width: 992px) {
+    .header-image {
+      height: 16rem; } }
+
 section.contents#contents {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -663,6 +691,18 @@ section.contents#contents {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+
+section.contents#contents .col-2 {
+  width: 100%;
+  padding: .25rem; }
+  @media (min-width: 768px) {
+    section.contents#contents .col-2 {
+      width: 50%;
+      padding: .5rem; } }
+  @media (min-width: 992px) {
+    section.contents#contents .col-2 {
+      width: 50%;
+      padding: .5rem; } }
 
 section.posts {
   -webkit-box-orient: vertical;

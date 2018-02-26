@@ -35,7 +35,7 @@ if( $paged >= 2 || $page >=2 ){
 <div id="wrap">
 <!-- Header -->
         <header class="header">
-            <div class="container">
+            <div class="menu-header container">
                 <div class="brand">
             <a href="<?php home_url(); ?>"><h1> <?php bloginfo('name'); ?> </h1></a>
                 </div>
