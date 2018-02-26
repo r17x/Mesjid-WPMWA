@@ -69,11 +69,12 @@ add_action( 'wp_head', function(){
         <link rel="apple-touch-icon-precomposed" sizes="120x120" href="%s/apple-touch-icon-120x120.png" />
         <link rel="icon" type="image/png" href="%s/32.png" sizes="32x32" />
         <link rel="icon" type="image/png" href="%s/16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="%s/144.png" sizes="144x144" />
         <meta name="application-name" content="&nbsp;"/>
         <meta name="msapplication-TileColor" content="#FFFFFF" />
         <meta name="msapplication-square310x310logo" content="%s/310.png" />
         <meta name="theme-color" content="#38c172"/>
-        ', $imgPath, $imgPath, $imgPath, $imgPath, $imgPath);
+        ', $imgPath, $imgPath, $imgPath, $imgPath, $imgPath, $imgPath );
 } );
 add_action( 'wp_enqueue_scripts', function(){
         wp_enqueue_script( 'javascript', get_template_directory_uri() . '/js/registerServiceWorker.js' );
