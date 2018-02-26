@@ -1,5 +1,7 @@
 ### Mesjid Wp Theme
 
+![Preview](https://github.com/ri7nz/Mesjid/blob/master/Screenshot.png)
+
 #### How to implement tailwindcss into Wordpress Theme/Template
 - Coming soon !
 #### How To Add This Theme On Your Wordpress Theme
