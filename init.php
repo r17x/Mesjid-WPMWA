@@ -8,7 +8,9 @@ if (! function_exists( 'mesjidThemeSetup' )){
 }
 
 add_action('after_setup_theme', 'mesjidThemeSetup'); 
-
+function getSwJs(){
+    include('swjs.php');
+}
 function generateManifest($path){
     $manifest = [
         'short_name' => get_bloginfo('name'),
@@ -30,18 +32,7 @@ function generateManifest($path){
     fwrite($f, json_encode($manifest));
     fclose($f);
     $f = fopen( $path. 'sw.js' , 'w');
-
-    $js = "self.addEventListener('install', function(e) {
-            e.waitUntil(
-                caches.open('mesjid-pwa').then(function(cache){
-                    return cache.addAll([
-                        '/',
-                        '/wp-content/themes/mesjid/style.css',
-                        '/wp-content/uploads/'
-                    ]) ; 
-                })            
-                );
-            });";
+    $js = file_get_contents('swjs.php'); 
     fwrite($f, $js);
     fclose($f);
 }
@@ -59,7 +50,6 @@ add_action( 'wp_head', function(){
         ', $blogUri, $blogUri, $blogUri, $blogUri);
 } );
 add_action( 'wp_enqueue_scripts', function(){
-    if ( is_home() && is_front_page() )
         wp_enqueue_script( 'javascript', get_template_directory_uri() . '/js/registerServiceWorker.js' );
 } ); 
 
