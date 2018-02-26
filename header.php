@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <title>
 <?php 
@@ -23,8 +23,7 @@ if( $paged >= 2 || $page >=2 ){
 
 ?>
     </title>
-
-<meta name="viewport" content="width=device-width, user-scalable=no" />
+<meta name="viewport" content="width=device-width, user-scalable=2" />
 <!-- Style Sheet -->
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url');?>">
 <?php wp_head(); ?>
