@@ -28,22 +28,22 @@ function generateManifest($path){
             [
                 'src' => sprintf($imgPath, '192.png'),
                 'sizes' => "192x192",
-                "type"=> "image/x-png" 
+                "type"=> "image/png" 
             ],
             [
                 'src' => sprintf($imgPath, '144.png'),
                 'sizes' => "144x144",
-                "type"=> "image/x-png" 
+                "type"=> "image/png" 
             ],
             [
                 'src' => sprintf($imgPath, '512.png'),
                 'sizes' => "512x512",
-                "type"=> "image/x-png" 
+                "type"=> "image/png" 
             ],
             [
                 'src' => sprintf($imgPath, 'apple-touch-icon-120x120.png'),
                 'sizes' => "120x120",
-                "type"=> "image/x-png" 
+                "type"=> "image/png" 
             ]
         ],
         "start_url" => get_bloginfo('url'),

@@ -25,10 +25,11 @@
 self.addEventListener('install', function(e) {
   e.waitUntil(
       caches.open('<?php echo $name?>').then(function(c){
+          console.log('cache all created :D');
           return c.addAll([
             <?php echo '"' . implode('","', $list) . '"' ?>
-          ]) ; 
-      })            
+          ]); 
+      })
   );
 });
 
