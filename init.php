@@ -9,17 +9,27 @@ if (! function_exists( 'mesjidThemeSetup' )){
 
 add_action('after_setup_theme', 'mesjidThemeSetup'); 
 function getSwJs(){
+    ob_start();
     include('swjs.php');
+    return ob_get_clean(); 
 }
 function generateManifest($path){
+    $imgPath  = get_template_directory_uri() .'/img/%s';
     $manifest = [
         'short_name' => get_bloginfo('name'),
         'name' => get_bloginfo('name'),
         'description' => get_bloginfo('description'),
-        'icons' => [
-            'src' => 'favicon.ico',
-            'sizes' => "64x64 32x32 24x24 16x16",
-            "type"=> "image/x-icon" 
+        'icons' =>  [
+            [
+                'src' => sprintf($imgPath, 'favicon.ico'),
+                'sizes' => "64x64 32x32 24x24 16x16",
+                "type"=> "image/x-icon" 
+            ],
+            [
+                'src' => sprintf($imgPath, '120x120.png'),
+                'sizes' => "120x120",
+                "type"=> "image/x-png" 
+            ]
         ],
         "start_url" => get_bloginfo('url'),
         "display" => "standalone",
@@ -32,22 +42,22 @@ function generateManifest($path){
     fwrite($f, json_encode($manifest));
     fclose($f);
     $f = fopen( $path. 'sw.js' , 'w');
-    $js = file_get_contents('swjs.php'); 
+    $js = getSwJs();
     fwrite($f, $js);
     fclose($f);
 }
 
 add_action( 'wp_head', function(){
-    $blogUri = get_bloginfo('url'); 
-    echo sprintf('<link rel="manifest" href="%s">', $blogUri . '/manifest.json');
+    $imgPath  = get_template_directory_uri() .'/img';
     echo sprintf('
-        <link rel="apple-touch-icon-precomposed" sizes="%s/120x120" href="apple-touch-icon-120x120.png" />
-        <link rel="icon" type="image/png" href="%s/favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="%s/favicon-16x16.png" sizes="16x16" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="%s/apple-touch-icon-120x120.png" />
+        <link rel="icon" type="image/png" href="%s/32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="%s/16x16.png" sizes="16x16" />
         <meta name="application-name" content="&nbsp;"/>
         <meta name="msapplication-TileColor" content="#FFFFFF" />
-        <meta name="msapplication-square310x310logo" content="%s/mstile-310x310.png" />
-        ', $blogUri, $blogUri, $blogUri, $blogUri);
+        <meta name="msapplication-square310x310logo" content="%s/310x310.png" />
+        ', $imgPath, $imgPath, $imgPath, $imgPath, $imgPath);
 } );
 add_action( 'wp_enqueue_scripts', function(){
         wp_enqueue_script( 'javascript', get_template_directory_uri() . '/js/registerServiceWorker.js' );
