@@ -65,7 +65,7 @@ function generateManifest($path){
 add_action( 'wp_head', function(){
     $imgPath  = get_template_directory_uri() .'/img';
     echo sprintf('
-        <link rel="manifest" href="manifest.json" />
+        <link rel="manifest" href="%s/manifest.json" />
         <link rel="apple-touch-icon-precomposed" sizes="120x120" href="%s/apple-touch-icon-120x120.png" />
         <link rel="icon" type="image/png" href="%s/32.png" sizes="32x32" />
         <link rel="icon" type="image/png" href="%s/16.png" sizes="16x16" />
@@ -74,7 +74,7 @@ add_action( 'wp_head', function(){
         <meta name="msapplication-TileColor" content="#FFFFFF" />
         <meta name="msapplication-square310x310logo" content="%s/310.png" />
         <meta name="theme-color" content="#38c172"/>
-        ', $imgPath, $imgPath, $imgPath, $imgPath, $imgPath, $imgPath );
+        ', get_bloginfo('url') , $imgPath, $imgPath, $imgPath, $imgPath, $imgPath, $imgPath, $imgPath );
 } );
 add_action( 'wp_enqueue_scripts', function(){
         wp_enqueue_script( 'javascript', get_template_directory_uri() . '/js/registerServiceWorker.js' );
