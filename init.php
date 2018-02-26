@@ -26,7 +26,17 @@ function generateManifest($path){
                 "type"=> "image/x-icon" 
             ],
             [
-                'src' => sprintf($imgPath, '120x120.png'),
+                'src' => sprintf($imgPath, '192.png'),
+                'sizes' => "192x192",
+                "type"=> "image/x-png" 
+            ],
+            [
+                'src' => sprintf($imgPath, '512.png'),
+                'sizes' => "512x512",
+                "type"=> "image/x-png" 
+            ],
+            [
+                'src' => sprintf($imgPath, 'apple-touch-icon-120x120.png'),
                 'sizes' => "120x120",
                 "type"=> "image/x-png" 
             ]
@@ -52,11 +62,12 @@ add_action( 'wp_head', function(){
     echo sprintf('
         <link rel="manifest" href="manifest.json" />
         <link rel="apple-touch-icon-precomposed" sizes="120x120" href="%s/apple-touch-icon-120x120.png" />
-        <link rel="icon" type="image/png" href="%s/32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="%s/16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="%s/32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="%s/16.png" sizes="16x16" />
         <meta name="application-name" content="&nbsp;"/>
         <meta name="msapplication-TileColor" content="#FFFFFF" />
-        <meta name="msapplication-square310x310logo" content="%s/310x310.png" />
+        <meta name="msapplication-square310x310logo" content="%s/310.png" />
+        <meta name="theme-color" content="#38c172"/>
         ', $imgPath, $imgPath, $imgPath, $imgPath, $imgPath);
 } );
 add_action( 'wp_enqueue_scripts', function(){

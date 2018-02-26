@@ -5,10 +5,12 @@
     $list = [
         '/',
         '/style.css',
-        '/img/16x16.png',
+        '/img/16.png',
         '/img/apple-touch-icon-120x120.png',
-        '/img/32x32.png',
-        '/img/310x310.png', 
+        '/img/32.png',
+        '/img/310.png', 
+        '/img/192.png', 
+        '/img/512.png', 
     ];
 
     $list = array_map( function($u) use($themePath){
