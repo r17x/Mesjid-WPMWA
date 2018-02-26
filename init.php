@@ -31,6 +31,11 @@ function generateManifest($path){
                 "type"=> "image/x-png" 
             ],
             [
+                'src' => sprintf($imgPath, '144.png'),
+                'sizes' => "144x144",
+                "type"=> "image/x-png" 
+            ],
+            [
                 'src' => sprintf($imgPath, '512.png'),
                 'sizes' => "512x512",
                 "type"=> "image/x-png" 

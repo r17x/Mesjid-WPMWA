@@ -10,6 +10,7 @@
         '/img/32.png',
         '/img/310.png', 
         '/img/192.png', 
+        '/img/144.png', 
         '/img/512.png', 
     ];
 

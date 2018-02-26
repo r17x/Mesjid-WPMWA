@@ -11,3 +11,17 @@ function registerServiceWorker(){
 
 }
 registerServiceWorker();
+
+
+//Button Form 
+window.addEventListener('beforeinstallprompt', e => {
+    e.userChoice.then(choiceResult => {
+        console.log(choiceResult.outcome); 
+
+        if(choiceResult.outcome == 'dismissed') 
+            console.log('User is Good Cancel');
+        else
+            console.log('User Added TO Chrome'); 
+
+    });
+});
