@@ -1,3 +1,10 @@
+## Wordpress Theme
+   - Wordpress Basic Template hierarchy
+   - Tailwindcss With Gulp
+   - Basic PWA (Progressive Web Apps)
+   - [Preview Theme](https://github.com/ri7nz/Mesjid#preview-theme)
+   - [Install](https://github.com/ri7nz/Mesjid#how-to-add-this-theme-on-your-wordpress-theme)
+   - [For Development](https://github.com/ri7nz/Mesjid#for-development)
 ### Preview Theme
 - Laptop Screen
 ![Laptop](https://github.com/ri7nz/Mesjid/blob/master/docs/laptop.png)
