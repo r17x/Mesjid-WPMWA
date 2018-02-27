@@ -1,7 +1,9 @@
 ### Preview Theme
-
-![Laptop](https://github.com/ri7nz/Mesjid/blob/master/screenshot.png)
+- Laptop Screen
+![Laptop](https://github.com/ri7nz/Mesjid/blob/master/docs/laptop.png)
+- Phone Landscape Screen
 ![Phone Landscape](https://github.com/ri7nz/Mesjid/blob/master/docs/phone-landscape.png)
+- Phone Potrait Screen
 ![Phone Potrait](https://github.com/ri7nz/Mesjid/blob/master/docs/phone-SamsungS5.png)
 
 #### How to implement tailwindcss into Wordpress Theme/Template
