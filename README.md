@@ -2,7 +2,7 @@
 
 ![Laptop](https://github.com/ri7nz/Mesjid/blob/master/screenshot.png)
 ![Phone Landscape](https://github.com/ri7nz/Mesjid/blob/master/docs/phone-landscape.png)
-![Phone Potrait](https://github.com/ri7nz/Mesjid/blob/master/docs/phone-SamsungS3.png)
+![Phone Potrait](https://github.com/ri7nz/Mesjid/blob/master/docs/phone-SamsungS5.png)
 
 #### How to implement tailwindcss into Wordpress Theme/Template
 - Coming soon !
