@@ -2,9 +2,16 @@
    - Wordpress Basic Template hierarchy
    - Tailwindcss With Gulp
    - Basic PWA (Progressive Web Apps)
+   - [Audit](#audit)
    - [Preview Theme](#preview-theme)
    - [Install](#how-to-add-this-theme-on-your-wordpress-theme)
    - [For Development](#for-development)
+### Audit
+- **First Audit**
+![first audit](https://github.com/ri7nz/Mesjid/blob/master/docs/lighthouse-audit-first.png)
+- **Second Audit**
+![first audit](https://github.com/ri7nz/Mesjid/blob/master/docs/lighthouse-audit-second.png)
+
 ### Preview Theme
 - Laptop Screen
 ![Laptop](https://github.com/ri7nz/Mesjid/blob/master/docs/laptop.png)
