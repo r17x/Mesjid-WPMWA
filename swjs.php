@@ -123,5 +123,3 @@ self.addEventListener('activate', function(e){
         })
     );
 });
-
-console.log(self.toast);  

@@ -534,9 +534,9 @@ a:hover,
 a:focus {
   color: #fff; }
 
-@media (min-width: 576px) {
-  #wpadminbar .ab-icon {
-    width: 45px; } }
+@media (max-width: 782px) {
+  #wpadminbar #wp-admin-bar-my-account a.ab-icon .ab-item {
+    width: 50px; } }
 
 /***********************************
 * All all import component ext css *
