@@ -1,3 +1,10 @@
+/**
+ * @{registerServiceWorker} register sw.js to browser
+ * sw.js code in swjs.php and generate file to 
+ * root folder wordpress by init.php
+ * using basic input/output php function fopen fwrite fclose
+ */
+
 function registerServiceWorker(){
     if(window.location.href !== window.location.origin + '/')
         return false;
@@ -10,18 +17,8 @@ function registerServiceWorker(){
    }    
 
 }
+
+/**
+ * call function registerServiceWorker();
+ */
 registerServiceWorker();
-
-
-//Button Form 
-window.addEventListener('beforeinstallprompt', e => {
-    e.userChoice.then(choiceResult => {
-        console.log(choiceResult.outcome); 
-
-        if(choiceResult.outcome == 'dismissed') 
-            console.log('User is Good Cancel');
-        else
-            console.log('User Added TO Chrome'); 
-
-    });
-});
