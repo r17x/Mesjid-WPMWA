@@ -1,11 +1,11 @@
 ## Wordpress Theme
-   - Wordpress Basic Template hierarchy
-   - Tailwindcss With Gulp
-   - Basic PWA (Progressive Web Apps)
-   - [Audit](#audit)
-   - [Preview Theme](#preview-theme)
-   - [Install](#how-to-add-this-theme-on-your-wordpress-theme)
-   - [For Development](#for-development)
+   - **Wordpress Basic Template hierarchy**  
+   - **Tailwindcss With Gulp**   
+   - **Basic PWA | Progressive Web Apps | include Offline & Cache Management**   
+   - [**Audit**](#audit)
+   - [**Preview Theme**](#preview-theme)
+   - [**Install**](#how-to-add-this-theme-on-your-wordpress-theme)
+   - [**For Development**](#for-development)
 ### Audit
 - **First Audit**
 ![first audit](https://github.com/ri7nz/Mesjid/blob/master/docs/lighthouse-audit-first.png)
