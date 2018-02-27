@@ -534,6 +534,10 @@ a:hover,
 a:focus {
   color: #fff; }
 
+@media (min-width: 576px) {
+  #wpadminbar .ab-icon {
+    width: 45px; } }
+
 /***********************************
 * All all import component ext css *
 ***********************************/

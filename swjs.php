@@ -68,6 +68,7 @@ var CACHE_NAME = '<?php echo $name?>',
 /**
  * Create Cache All  
  */
+console.log(self); 
 self.addEventListener('install', function(e) {
   e.waitUntil(
       caches.open(CACHE_NAME).then(function(c){
@@ -123,5 +124,4 @@ self.addEventListener('activate', function(e){
     );
 });
 
-
-
+console.log(self.toast);  

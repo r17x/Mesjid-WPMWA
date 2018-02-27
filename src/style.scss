@@ -11,6 +11,12 @@ a {
     }
 }
 
+@screen sm {
+    #wpadminbar .ab-icon {
+        width: 45px; 
+    }
+}
+
 /***********************************
 * All all import component ext css *
 ***********************************/
