@@ -7,7 +7,7 @@
 
 ?>
 <section id="contents" class="contents">
-<div class="container mt-4">
+<div class="container mt-4 p-2">
 <?php 
 if( have_posts() ):
     the_post();

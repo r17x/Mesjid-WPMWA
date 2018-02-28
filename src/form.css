@@ -1,6 +1,6 @@
 form {
 
-    @apply m-4 w-full shadow rounded max-w-md p-4;
+    @apply m-4 w-full rounded max-w-md p-4;
     margin: auto; 
 
     label {

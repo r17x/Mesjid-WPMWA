@@ -1,5 +1,10 @@
 <?php 
 session_start(); 
+include('class.wp_options.php');
+new WPEX_Theme_Options();
+function mesjidThemeGetOption( $id=''){
+	return WPEX_Theme_Options::get_theme_option( $id );
+}
 include('init.php'); 
 include('shortcode.php');
 

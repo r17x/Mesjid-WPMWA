@@ -14,6 +14,8 @@ function getSwJs(){
     return ob_get_clean(); 
 }
 function generateManifest($path){
+    if ( empty( mesjidThemeGetOption('active_pwa') ) ) 
+        return;
     $imgPath  = get_template_directory_uri() .'/img/%s';
     $manifest = [
         'short_name' => get_bloginfo('name'),
@@ -53,7 +55,6 @@ function generateManifest($path){
     ]; 
 
     $f = fopen( $path . 'manifest.json', 'w');
-
     fwrite($f, json_encode($manifest));
     fclose($f);
     $f = fopen( $path. 'sw.js' , 'w');
@@ -63,6 +64,8 @@ function generateManifest($path){
 }
 
 add_action( 'wp_head', function(){
+    if ( empty( mesjidThemeGetOption('active_pwa') ) ) 
+        return;
     $imgPath  = get_template_directory_uri() .'/img';
     echo sprintf('
         <link rel="manifest" href="%s/manifest.json" />
@@ -77,7 +80,11 @@ add_action( 'wp_head', function(){
         ', get_bloginfo('url') , $imgPath, $imgPath, $imgPath, $imgPath, $imgPath, $imgPath, $imgPath );
 } );
 add_action( 'wp_enqueue_scripts', function(){
-        wp_enqueue_script( 'javascript', get_template_directory_uri() . '/js/registerServiceWorker.js' );
+    if ( empty( mesjidThemeGetOption('active_pwa') ) ) {
+        wp_enqueue_script( 'javascript', get_template_directory_uri() . '/js/unregister.js' );
+        return; 
+    }
+    wp_enqueue_script( 'javascript', get_template_directory_uri() . '/js/registerServiceWorker.js' );
 } ); 
 
 function checkPage(){

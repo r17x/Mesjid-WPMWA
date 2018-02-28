@@ -25,10 +25,12 @@ if( $paged >= 2 || $page >=2 ){
     </title>
 <meta name="viewport" content="width=device-width, user-scalable=2" />
 <!-- Style Sheet -->
+<?php if ( ! empty(mesjidThemeGetOption('styleRequest')) ): ?>
+<link rel="<?php echo mesjidThemeGetOption('styleRequest');?>" href="<?php bloginfo('stylesheet_url');?>" as="style">
+<?php endif; ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url');?>">
 <?php wp_head(); ?>
 <!-- EndStyle Sheet -->
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url');?>">
 </head>
 <body <?php body_class(); ?> >
 <div id="wrap">

@@ -29,7 +29,7 @@ section.contents#contents{
 }
 
 section.posts{
-    @apply flex-col items-center;
+    @apply flex-col items-center p-2; 
     .title{
         @apply text-2xl font-light text-left 
         my-2 mb-4 border-b border-grey-light 

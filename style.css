@@ -725,7 +725,8 @@ section.posts {
   flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  padding: .5rem; }
 
 section.posts .title {
   font-size: 1.5rem;
@@ -762,8 +763,6 @@ section.posts .title {
 form {
   margin: 1rem;
   width: 100%;
-  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   border-radius: .25rem;
   max-width: 40rem;
   padding: 1rem;
