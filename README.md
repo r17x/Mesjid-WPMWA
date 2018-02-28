@@ -3,9 +3,17 @@
    - [**Tailwindcss With Gulp**](https://github.com/dev-makassar/Tailwindcss-Starterkit)  
    - **Basic PWA | Progressive Web Apps | include Offline & Cache Management**   
    - [**Audit**](#audit)
+   - [**Theme Feature**](#feature)
    - [**Preview Theme**](#preview-theme)
    - [**Install**](#how-to-add-this-theme-on-your-wordpress-theme)
    - [**For Development**](#for-development)
+### Feature
+- ![themes options](https://github.com/ri7nz/Mesjid/blob/master/docs/Selection_225.png)
+- ![Unactive PWA](https://github.com/ri7nz/Mesjid/blob/master/docs/Selection_226.png)
+- ![Default PWA](https://github.com/ri7nz/Mesjid/blob/master/docs/Selection_227.png)
+- ![Prefetch](https://github.com/ri7nz/Mesjid/blob/master/docs/Selection_228.png)
+- ![Preload](https://github.com/ri7nz/Mesjid/blob/master/docs/Selection_229.png)
+- ![Dns prefetch](https://github.com/ri7nz/Mesjid/blob/master/docs/Selection_230.png)
 ### Audit
 - **Server** _Centos 7 PHP5.6 Apache With Web Server Optimize Software | Provision_ [**Kusanagi**](https://en.kusanagi.tokyo/)
 - **First Audit**
