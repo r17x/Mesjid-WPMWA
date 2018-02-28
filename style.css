@@ -741,6 +741,24 @@ section.posts .title {
   padding-bottom: .5rem;
   cursor: pointer; }
 
+.col-14 {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .col-14 {
+      width: 25%; } }
+  @media (min-width: 992px) {
+    .col-14 {
+      width: 25%; } }
+
+.col-34 {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .col-34 {
+      width: 75%; } }
+  @media (min-width: 992px) {
+    .col-34 {
+      width: 75%; } }
+
 form {
   margin: 1rem;
   width: 100%;
@@ -972,6 +990,18 @@ article .comments-area {
 
 article .comments-area h2 {
   font-size: .875rem; }
+
+@media (max-width: 768px) {
+  .archive {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
+
+.archive {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
 
 footer {
   margin: 1rem;

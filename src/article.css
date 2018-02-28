@@ -64,7 +64,12 @@ article{
     }
 }
 
-
+.archive {
+    @media (max-width: 768px){
+        @apply flex-col;
+    }
+    @apply inline-flex; 
+}
 
 footer{
     @apply m-4 p-1 font-semibold; 

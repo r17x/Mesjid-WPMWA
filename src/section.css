@@ -37,3 +37,25 @@ section.posts{
     } 
 }
 
+.col-14 {
+    @apply w-full;
+
+    @screen md {
+        @apply w-1/4;  
+    }
+
+    @screen lg {
+        @apply w-1/4;  
+    }
+}
+.col-34 {
+    @apply w-full;
+
+    @screen md {
+        @apply w-3/4;  
+    }
+
+    @screen lg {
+        @apply w-3/4;  
+    }
+}

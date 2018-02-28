@@ -12,13 +12,13 @@ elseif( is_archive() ):
 endif;
 ?>
 <section id="contents" class="contents">
-    <div class="container inline-flex">
-    <section id="post" class="posts w-3/4 p-2 px-4">
+    <div class="container archive">
+    <section id="post" class="posts col-34 p-2 px-4">
         <?php 
                 include('post-loop.php');
          ?>
     </section>
-    <div class="w-1/4">
+    <div class="col-14">
     <?php get_sidebar(); ?>
     </div>
     </div>
