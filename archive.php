@@ -12,7 +12,7 @@ elseif( is_archive() ):
 endif;
 ?>
 <section id="contents" class="contents">
-    <div class="container archive">
+    <div class="container page-archive">
     <section id="post" class="posts col-34 p-2 px-4">
         <?php 
                 include('post-loop.php');

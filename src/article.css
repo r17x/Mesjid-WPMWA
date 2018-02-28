@@ -64,7 +64,7 @@ article{
     }
 }
 
-.archive {
+.page-archive {
     @media (max-width: 768px){
         @apply flex-col;
     }

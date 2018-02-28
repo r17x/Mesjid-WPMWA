@@ -766,7 +766,8 @@ form {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   border-radius: .25rem;
   max-width: 40rem;
-  padding: 1rem; }
+  padding: 1rem;
+  margin: auto; }
 
 form label {
   display: block;
@@ -992,13 +993,13 @@ article .comments-area h2 {
   font-size: .875rem; }
 
 @media (max-width: 768px) {
-  .archive {
+  .page-archive {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; } }
 
-.archive {
+.page-archive {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex; }
