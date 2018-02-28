@@ -7,6 +7,7 @@
    - [**Install**](#how-to-add-this-theme-on-your-wordpress-theme)
    - [**For Development**](#for-development)
 ### Audit
+- **Server** _Centos 7 PHP5.6 Apache With Web Server Optimize Software | Provision_ [**Kusanagi**](https://en.kusanagi.tokyo/)
 - **First Audit**
 ![first audit](https://github.com/ri7nz/Mesjid/blob/master/docs/lighthouse-audit-first.png)
 - **Second Audit**
