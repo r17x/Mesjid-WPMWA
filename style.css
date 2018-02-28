@@ -534,7 +534,7 @@ a:hover,
 a:focus {
   color: #fff; }
 
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   ul#wp-admin-bar-top-secondary.ab-top-secondary.ab-top-menu {
     display: none; } }
 
