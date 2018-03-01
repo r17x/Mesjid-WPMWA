@@ -93,6 +93,11 @@ if ( ! class_exists( 'WPEX_Theme_Options' ) ) {
 				} else {
 					unset( $options['active_pwa'] ); // Remove from options if not checked
 				}
+				if ( ! empty( $options['auth_menu'] ) ) {
+					$options['auth_menu'] = 'on';
+				} else {
+					unset( $options['auth_menu'] ); // Remove from options if not checked
+				}
 
 				// Input
 				//if ( ! empty( $options['input_example'] ) ) {
@@ -136,6 +141,13 @@ if ( ! class_exists( 'WPEX_Theme_Options' ) ) {
 							<td>
 								<?php $value = self::get_theme_option( 'active_pwa' ); ?>
 								<input type="checkbox" name="theme_options[active_pwa]" <?php checked( $value, 'on' ); ?>> <?php esc_html_e( 'Activated PWA', get_bloginfo('name') ); ?>
+							</td>
+						</tr>
+						<tr valign="top">
+							<th scope="row"><?php esc_html_e( 'Enable Register\Login Menu ?', get_bloginfo('name') ); ?></th>
+							<td>
+								<?php $value = self::get_theme_option( 'auth_menu' ); ?>
+								<input type="checkbox" name="theme_options[auth_menu]" <?php checked( $value, 'on' ); ?>> <?php esc_html_e( 'Enable Auth Menu', get_bloginfo('name') ); ?>
 							</td>
 						</tr>
 

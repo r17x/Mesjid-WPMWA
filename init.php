@@ -80,7 +80,9 @@ add_action( 'wp_head', function(){
         ', get_bloginfo('url') , $imgPath, $imgPath, $imgPath, $imgPath, $imgPath, $imgPath, $imgPath );
 } );
 add_action( 'wp_enqueue_scripts', function(){
-    if ( empty( mesjidThemeGetOption('active_pwa') ) ) {
+    if ( empty( mesjidThemeGetOption('active_pwa') ) ||
+        is_super_admin(get_current_user_id())
+     ) {
         wp_enqueue_script( 'javascript', get_template_directory_uri() . '/js/unregister.js' );
         return; 
     }

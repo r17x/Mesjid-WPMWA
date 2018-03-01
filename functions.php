@@ -236,6 +236,8 @@ register_nav_menus([
 
 add_filter( 'wp_nav_menu_items', 'custom_menus', 10, 2 );
 function custom_menus($items, $args){
+    if ( empty( mesjidThemeGetOption('auth_menu') ) )
+        return $items;  
     if( is_user_logged_in() ){
         $user        = get_current_user();
         $logout_url  = wp_logout_url('/');
