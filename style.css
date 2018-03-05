@@ -623,12 +623,25 @@ header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: .875rem;
   list-style: none;
   padding: 0;
   cursor: pointer; }
+  @media (min-width: 992px) {
+    header ul {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; } }
+  @media (min-width: 768px) {
+    header ul {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; } }
 
 header ul li {
   padding-left: .5rem;
@@ -1055,6 +1068,13 @@ footer {
 .widget aside ul li a:hover,
 .widget aside ul li a:focus {
   font-weight: 700; }
+
+.comment-respond > a {
+  color: #38c172; }
+
+.comment-respond > a:hover,
+.comment-respond > a:focus {
+  color: #38c172; }
 
 .container {
   width: 100%; }

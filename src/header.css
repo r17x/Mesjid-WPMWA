@@ -29,9 +29,16 @@ header{
 
     }
     ul { 
-        @apply flex justify-end; 
+        @apply flex flex-wrap justify-center text-sm; 
         @apply list-reset; 
         @apply cursor-pointer; 
+        @screen lg {
+            @apply justify-end;  
+        }
+
+        @screen md {
+            @apply justify-end;  
+        }
         li{
             @apply px-2 py-4;
             &:hover, &:focus {

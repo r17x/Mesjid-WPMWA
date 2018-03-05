@@ -30,5 +30,13 @@ $primary-color: $color-quepal;
 @import "article.css";
 @import "widget.css";
 
+.comment-respond > a {
+    @apply text-green;
+
+   &:hover, &:focus {
+        @apply text-green;  
+   } 
+}
+
 @tailwind utilities;
 @tailwind screens;
