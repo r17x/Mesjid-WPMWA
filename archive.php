@@ -1,12 +1,13 @@
 <?php get_header(); ?>
 <!-- Content -->
 <?php 
-if( is_home() && ! is_front_page() ): 
+if( is_home() && ! is_front_page() ||  is_archive() ): 
     get_template_part('part/header-image'); 
-elseif( is_archive() ): 
+endif; 
+if( is_archive() ): 
 ?>
 <div class="bg-green w-full text-white h-12 text-center ">
-<h2><?php echo get_the_archive_title() ?></h2>
+<h2 style="padding-top: .5rem" ><?php echo get_the_archive_title() ?></h2>
 </div>
 <?php
 endif;
