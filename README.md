@@ -7,6 +7,7 @@
    - [**Preview Theme**](#preview-theme)
    - [**Install**](#how-to-add-this-theme-on-your-wordpress-theme)
    - [**For Development**](#for-development)
+   - [**DEMO**](https://alghaffar.suarabaru.com/)
 ### Feature
 - ![themes options](https://github.com/ri7nz/Mesjid/blob/master/docs/Selection_225.png)
 - ![Unactive PWA](https://github.com/ri7nz/Mesjid/blob/master/docs/Selection_226.png)
