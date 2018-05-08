@@ -269,3 +269,14 @@ function remove_adminbar(){
     if( ! current_user_can('administrator') && ! is_admin())
         show_admin_bar(false); 
 }
+
+/*
+ * Search Result Filter
+ */
+add_filter('pre_get_posts', 'search_result_filter');
+function search_result_filter($query){
+    if($query->is_search){
+        $query->set('post_type', 'post'); 
+    }
+    return $query; 
+}

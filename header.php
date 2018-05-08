@@ -38,7 +38,7 @@ if( $paged >= 2 || $page >=2 ){
         <header class="header">
             <div class="menu-header container">
                 <div class="brand">
-            <a href="<?php home_url(); ?>"><h1> <?php bloginfo('name'); ?> </h1></a>
+            <a href="<?php echo esc_url(home_url('/')); ?>"><h1> <?php bloginfo('name'); ?> </h1></a>
                 </div>
                 <?php
                 wp_nav_menu([
