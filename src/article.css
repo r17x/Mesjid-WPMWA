@@ -72,6 +72,6 @@ article{
 }
 
 footer{
-    @apply m-4 p-1 font-semibold; 
+    @apply m-4 p-1 font-semibold text-center; 
 }
 

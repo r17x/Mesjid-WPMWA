@@ -1019,7 +1019,8 @@ article .comments-area h2 {
 footer {
   margin: 1rem;
   padding: .25rem;
-  font-weight: 600; }
+  font-weight: 600;
+  text-align: center; }
 
 .widget {
   display: -webkit-box;
