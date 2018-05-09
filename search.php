@@ -6,7 +6,7 @@ get_header();
 ?>
 
 <div class="wrap">
-    <div id="primary" class="content-area">
+    <div id="primary" style="min-height: 30rem;" class="content-area">
         <main id="main" class="site-main" role="main">
 
             <?php get_search_form(); 
