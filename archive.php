@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * Template Name: Blog Template 
+ */
+
+get_header(); ?>
 <!-- Content -->
 <?php 
 if( is_home() && ! is_front_page() ||  is_archive() ): 
