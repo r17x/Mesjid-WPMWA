@@ -11,4 +11,7 @@ elseif( have_posts()):
     endwhile;
 endif;
 
-
+?>
+<div class="pagination">
+<?= paginate_links(); ?>
+</div>

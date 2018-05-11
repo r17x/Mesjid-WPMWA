@@ -13,3 +13,24 @@
 .btn-s {
     @apply w-1/3;
 }
+
+.pagination{
+    @apply items-center my-4; 
+
+    a {
+        unset: all;  
+    }
+
+    .page-numbers {
+        @apply px-4 py-2 bg-green rounded text-white;
+    }
+
+    .current{
+        @apply bg-grey-darker;  
+    }
+    
+    .next .page-numbers  {
+        @apply rounded-none;  
+    }
+
+}

@@ -699,6 +699,31 @@ ul.sub-menu {
 .btn-s {
   width: 33.33333%; }
 
+.pagination {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.pagination a {
+  unset: all; }
+
+.pagination .page-numbers {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: #38c172;
+  border-radius: .25rem;
+  color: #fff; }
+
+.pagination .current {
+  background-color: #606f7b; }
+
+.pagination .next .page-numbers {
+  border-radius: 0; }
+
 section {
   display: -webkit-box;
   display: -ms-flexbox;
