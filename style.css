@@ -653,6 +653,19 @@ header ul li:hover,
 header ul li:focus {
   background-color: #1f9d55; }
 
+/**
+ * Drop Down CSS
+ */
+ul.sub-menu {
+  display: none;
+  background-color: inherit;
+  width: 15%;
+  position: absolute;
+  z-index: 1; }
+
+.menu-item:hover .sub-menu {
+  display: block; }
+
 .btn {
   padding-top: .25rem;
   padding-bottom: .25rem;
