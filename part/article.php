@@ -1,7 +1,13 @@
 <?php $isSingle =  is_single(); ?>
 <article>
   <div class="article-header">
-    <h1><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h1>
+    <h1>
+        <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
+    </h1>
+    <small>
+        <?php echo get_the_date('d F Y'); ?>
+        oleh <strong> <?php the_author(); ?> </strong> 
+    </small> <br>
     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('category_image')?></a>
   </div>
   <div class="article-content">
