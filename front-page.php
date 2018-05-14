@@ -12,7 +12,7 @@
 # Get All Categories
 # Get Post By Category
 #
-$limit = 3; 
+$limit = 1;
 
 include_once('latest-post.php'); 
 

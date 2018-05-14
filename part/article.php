@@ -12,7 +12,7 @@
   </div>
   <div class="article-content">
 <?php
-if(  $isSingle  ){
+if(  $isSingle OR $single  ){
     the_content(); 
 }else{
     the_excerpt();
@@ -24,7 +24,7 @@ if( $isSingle && get_post_type() === 'mesjid')
   </div>
 <?php if(! $isPage): ?>
   <div class="article-footer">
-    <?php if(! $isSingle ): ?>
+    <?php if(! $isSingle and ! $single  ): ?>
     <a class="btn btn-s continue" href="<?php the_permalink();?>">Baca Selengkapnya</a>
     <?php else: ?>
         <nav class="article-nav">
