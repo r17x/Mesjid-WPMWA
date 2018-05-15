@@ -9,8 +9,10 @@ get_header();
     <div id="primary" style="min-height: 30rem;" class="content-area">
         <main id="main" class="site-main" role="main">
 
-            <?php get_search_form(); 
-            get_template_part('archive'); ?>
+<?php 
+get_template_part('part/searchform'); 
+get_template_part('archive'); 
+?>
         </main><!-- #main -->
     </div><!-- #primary -->
 </div><!-- .wrap -->
